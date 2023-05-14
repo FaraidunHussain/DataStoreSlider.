@@ -1,0 +1,65 @@
+<!DOCTYPE html >
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width =device-width, initial-scale= 1">
+<link rel="stylesheet" href="datastore.CSS" type="text/css">
+<head>
+<title>Premier League Data Store Table with imageSlider</title>
+
+<script>
+var description = new Array
+ (" LIVERPOOL |95 POINTS | WINNER 2013-214 |30 WIN |5 DRAW |3 LOST",
+ " CHELSEA |92 POINTS | 30 WIN |2 DRAW |6 LOST",
+ " MANCHISTER CITY |90 POINTS | 30 WIN |0 DRAW |8 LOST",
+ " ARSENAL |88 POINTS | 29 WIN |1 DRAW |7 LOST");
+var pictures = new Array(4);
+var counter = 0;
+function initialize(){
+  pictures[0] = new Image();
+  pictures[0].src = "1.jpg";
+  pictures[1] = new Image();
+  pictures[1].src = "2.jpg";
+  pictures[2] = new Image();
+  pictures[2].src = "3.jpg";
+  pictures[3] = new Image();
+  pictures[3].src = "4.jpg";
+}
+
+function next(){
+  counter++;
+  if (counter > 3){
+    counter = 0;
+  } 
+  document.imgDisplay.src = pictures[counter].src;
+  document.myForm.txtDescription.value = description[counter];
+} 
+    function prev(){
+  counter--;
+  if (counter < 0){
+    counter = 3;
+  } 
+  document.imgDisplay.src = pictures[counter].src;
+  document.myForm.txtDescription.value = description[counter];
+}
+     /*Faraidun Hussain 2014 / this software refere to www.designattributes.net*/
+</script>
+</head>
+<body onLoad="initialize()">
+<center>
+<h1>English Premier League Data Table.</h1>
+<h1>Image Array javaScript data store slider .</h1>
+<br>
+  <form name="myForm">
+  <br>
+<img src="1.jpg" name="imgDisplay" width="500" height="500">
+<br><br>
+<input type="text" id="class" name="txtDescription" value=" LIVERPOOL |95 POINTS | WINNER 2013-214 |30 WIN |5 DRAW |3 LOST" disabled>
+<b><br>
+<input type ="button" class="btn" value="next" onClick="next()">
+<input type ="button" class="btn" value="prev" onClick ="prev()">
+<br>
+      </b>
+    </form>
+    </center>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+#class{
+	background-color:#CCC;
+	color:#900;
+    border: 0px;
+    background-color: brown;
+    color: antiquewhite;
+    height: 50px;
+    width: 40%;
+    border-radius: 30px;
+    text-align: center;
+	}
+#class:hover {
+           border-radius: 30px;
+        opacity: 0.7;
+        transition: 0.8s;
+    }
+img {
+        border-radius: 10%;
+    }
+img:hover {
+        border-radius: 10%;
+        opacity: 0.7;
+        transition: 0.8s;
+    }
+.btn {
+     border: 0px;
+    width: 45px;
+    height: 40px;
+    text-align: center;
+    background-color: brown;
+    color: aliceblue;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 15%;
+    }
+@media screen and (max-width: 819px){
+    #class {
+ 
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 768px)
+    {
+ img {
+       width: 60%;
+     height: auto;
+     align-items: center;
+        }
+#class {
+	background-color:#CCC;
+	color:#900;
+    border: 0px;
+    background-color: brown;
+    color: antiquewhite;
+   
+    padding: 15px;
+    display: block;
+    text-justify: auto;
+    border-radius: 30px;
+    text-align: center;
+	}
+    }
